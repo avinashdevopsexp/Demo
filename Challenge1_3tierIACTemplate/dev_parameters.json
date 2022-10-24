@@ -1,0 +1,574 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+      "storageAccountName": {
+      "value": "devdemogentmhstr01"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "Storage_skuTier": {
+      "value": "Standard"
+    },
+    "administratorLogin": {
+      "value": "sqladmin"
+    },
+    "serverName": {
+      "value": "devdemotmhdbserver"
+    },
+    "sqlDBName": {
+      "value": "DEVDEMOTMHDB01"
+    },
+    "administratorLoginPassword": {
+      "value": ""
+    },
+    "SQL_skuName": {
+      "value": "Standard"
+    },
+    "skuTier": {
+      "value": "Standard"
+    },
+    "webAppName_backend": {
+      "value": "DEVDEMOGENTMHWEB02-backend"
+    },
+    "webAppName_Frontend": {
+      "value": "DEVDEMOGENTMHWEB01-frontend"
+    },
+    "appServicePlanName": {
+      "value": "DEVDEMOAPPSERTMHWE01"
+    },
+    "linuxFxVersion": {
+      "value": "DOTNETCORE|3.1"
+    },
+    "sku": {
+      "value": "B1"
+    },
+    "appSettings": {
+        "value": {
+            "AzureAd__Authority": "https://login.microsoftonline.com/",
+            "AzureAd__TenantId": "demo.onmicrosoft.com",
+            "AzureAd__ClientId": "%ClientId%",
+            "ClientId": "%ClientId%",
+            "AzureAd__ClientSecret": "%ClientSecret%",
+            "ClientSecret": "%ClientSecret%",
+            "AzureAd__GraphResource": "https://graph.microsoft.com/",
+            "AzureAd__GraphResourceEndPoint": "v1.0",
+            "ApplicationInsights__InstrumentationKey": "%InstrumentationKey%",
+            "HealthChecksUI__HealthChecks__0__Uri": "%Uri%",
+            "HealthCheck__BuildNumber": "",
+            "HealthCheck__SwaggerUrl": "%SwaggerUrl%",
+            "AzureSQLConnectionString": "%AzureSQLConnectionString%",
+            "LogicAppEndpoint__demoSupportEmail": "%demoSupportEmail%",
+            "AzureSearchToolAPIBaseUrl": "%AzureSearchToolAPIBaseUrl%",
+            "AzureSearchToolAPIUrl": "%AzureSearchToolAPIUrl%",
+            "ToolAPIKey": "%ToolAPIKey%",
+            "ToolAPIVersion": "%ToolAPIVersion%",
+            "AzureSearchComponentAPIBaseUrl": "%AzureSearchComponentAPIBaseUrl%",
+            "AzureSearchComponentAPIUrl": "%AzureSearchComponentAPIUrl%",
+            "ComponentAPIKey": "%ComponentAPIKey%",
+            "ComponentAPIVersion": "2020-06-30-Preview",
+            "Roles": "demo_demo_Customers,demo_demo_Dev,demo_demo_Test,demo_demo_Production",
+            "AssigneeGroupId": "%AssigneeGroupId%",
+            "ProductionAssigneeGroupId": "%ProductionAssigneeGroupId%",
+            "demoSuperAdmin": "%demoSuperAdmin%",
+            "demoTools": "%demoTools%",
+            "demoProductionAdmin": "%demoProductionAdmin%",
+            "demoProduction": "%demoProduction%",
+            "demoProductionQualityInspection": "%demoProductionQualityInspection%",
+            "GeneratorAssigneeId": "%GeneratorAssigneeId%",
+            "HubAssigneeId": "%HubAssigneeId%",
+            "MarriageAssigneeId": "%MarriageAssigneeId%",
+            "BackendAssigneeId": "%BackendAssigneeId%",
+            "PbiUserId": "%PbiUserId%",
+            "PbiPassword": "%PbiPassword%",
+            "Production_ReportId": "%ProductionReportId%",
+            "Tools_AssigneeReportId": "%ToolsAssigneeReportId%",
+            "Tools_LocationReportId": "%ToolsLocationReportId%"
+        }
+    },
+    "resourceTags": {
+      "value": {
+        "Environment": "Dev",
+        "BU": "demo"
+      }
+    },
+    "keyVaultName": {
+      "value": "KVDEVDEMOGENTMHWE01"
+    },
+    "skuName": {
+      "value": "Standard"
+    },
+    "accessPolicies": {
+            "value": {
+                "list": [
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "4700f80a-e221-42a9-a980-e71baa1f30ae",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "037260cc-7670-4bd3-a9f7-b9d6a80ae59e",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "f7d8a0fb-1c2e-4067-886b-1f1730d1846e",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "5cbbe7d2-0672-44bf-9dd6-2cd40598d100",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "d8fb277a-3a17-4d97-9f15-dc31e23191d2",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Create",
+                                "Import",
+                                "Recover",
+                                "Backup"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Recover",
+                                "Backup"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "b0de6ddf-ea6b-4fd9-96c6-e1cab9c85fbf",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Decrypt",
+                                "Encrypt",
+                                "UnwrapKey",
+                                "WrapKey",
+                                "Verify",
+                                "Sign",
+                                "Purge"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Purge"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers",
+                                "Purge"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "fe0b442a-24f7-4e6d-ba96-3aebaeae206c",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Decrypt",
+                                "Encrypt",
+                                "UnwrapKey",
+                                "WrapKey",
+                                "Verify",
+                                "Sign",
+                                "Purge"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Purge"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers",
+                                "Purge"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "8919623c-1950-4bbc-ad11-b9fa522ada51",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "283a15be-fb46-4c41-b343-079f171f1481",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "6955a489-6267-4bad-93d3-313dd3945189",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "6f9a2839-d2d6-451c-ae36-823052d678ec",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Decrypt",
+                                "Encrypt",
+                                "UnwrapKey",
+                                "WrapKey",
+                                "Verify",
+                                "Sign"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "12f921d8-f30d-4596-a652-7045b338485a",
+                        "objectId": "a4ec8dae-95d2-49b4-b2d0-247797c39d4b",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Decrypt",
+                                "Encrypt",
+                                "UnwrapKey",
+                                "WrapKey",
+                                "Verify",
+                                "Sign"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List"
+                            ],
+                            "certificates": []
+                        }
+                    }
+                ]
+            }
+        }
+  }
+}
